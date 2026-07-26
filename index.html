@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HT Banking System - Liquidity & Deposit Manager</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="withdrawal.png">
+    <link rel="icon" href="withdrawal.png" type="image/png">
 </head>
 <body>
 
@@ -27,6 +27,7 @@
         <section class="summary-row">
             <div class="summary-card gold">
                 <span class="card-label">Total Liquid Capital</span>
+                <!-- System total targeted by system_deduct.js -->
                 <h2 id="displayTotalDeposits">$1,152,910,000</h2>
                 <div class="progress-bar-container"><div class="progress-bar" style="width: 84.3%;"></div></div>
             </div>
@@ -51,17 +52,25 @@
                             <th>Account Tier</th>
                             <th>Routing Type</th>
                             <th>Amount</th>
-                            <th>Status / Action</th>
+                            <th>Action / Status</th>
                         </tr>
                     </thead>
                     <tbody id="depositLogBody">
-                        <!-- Sample Executable Row integrated with system_deduct.js -->
+                        <!-- Executable Row 1 -->
                         <tr>
                             <td>REF-90421</td>
                             <td>Tier-1 Reserve</td>
                             <td>SWIFT Wire</td>
                             <td class="item-amount">$50,000.00</td>
-                            <td><button class="btn-execute-remove btn-buy" style="padding: 4px 10px; font-size: 0.8rem; cursor: pointer;">Execute & Clear</button></td>
+                            <td><button class="btn-execute-remove btn-buy" style="padding: 6px 12px; font-size: 0.85rem; cursor: pointer; background: #0ecb81; color: #fff; border: none; border-radius: 4px; font-weight: bold;">Execute & Clear</button></td>
+                        </tr>
+                        <!-- Executable Row 2 -->
+                        <tr>
+                            <td>REF-90422</td>
+                            <td>Institutional Prime</td>
+                            <td>SEPA Transfer</td>
+                            <td class="item-amount">$125,000.00</td>
+                            <td><button class="btn-execute-remove btn-buy" style="padding: 6px 12px; font-size: 0.85rem; cursor: pointer; background: #0ecb81; color: #fff; border: none; border-radius: 4px; font-weight: bold;">Execute & Clear</button></td>
                         </tr>
                     </tbody>
                 </table>
@@ -78,7 +87,7 @@
         </section>
     </div>
 
-    <!-- Scripts -->
+    <!-- Script Architecture Integration -->
     <script src="ledger.js"></script>
     <script src="deposit.js"></script>
     <script src="deposit_vault.js"></script>
