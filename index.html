@@ -81,7 +81,7 @@
         <section class="data-panel withdrawal-panel">
             <h3>Funds Withdrawal</h3>
             <input type="number" id="withdrawInput" class="withdrawal-input" placeholder="Enter amount..." />
-            <button class="btn-withdraw" onclick="WithdrawalModule.withdrawFunds(document.getElementById('withdrawInput').value)">
+            <button class="btn-withdraw" onclick="WithdrawalModule.withdrawFunds(document.getElementById('withdrawInput').value, this)">
                 Execute Withdrawal
             </button>
         </section>
