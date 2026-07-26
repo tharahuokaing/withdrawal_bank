@@ -6,7 +6,6 @@
     <title>HT Banking System - Liquidity & Deposit Manager</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="withdrawal.png">
-
 </head>
 <body>
 
@@ -31,7 +30,6 @@
                 <h2 id="displayTotalDeposits">$1,152,910,000</h2>
                 <div class="progress-bar-container"><div class="progress-bar" style="width: 84.3%;"></div></div>
             </div>
-            <!-- Additional summary cards here -->
         </section>
 
         <!-- Operational Breakdowns -->
@@ -53,10 +51,19 @@
                             <th>Account Tier</th>
                             <th>Routing Type</th>
                             <th>Amount</th>
-                            <th>Status</th>
+                            <th>Status / Action</th>
                         </tr>
                     </thead>
-                    <tbody id="depositLogBody"></tbody>
+                    <tbody id="depositLogBody">
+                        <!-- Sample Executable Row integrated with system_deduct.js -->
+                        <tr>
+                            <td>REF-90421</td>
+                            <td>Tier-1 Reserve</td>
+                            <td>SWIFT Wire</td>
+                            <td class="item-amount">$50,000.00</td>
+                            <td><button class="btn-execute-remove btn-buy" style="padding: 4px 10px; font-size: 0.8rem; cursor: pointer;">Execute & Clear</button></td>
+                        </tr>
+                    </tbody>
                 </table>
             </section>
         </div>
