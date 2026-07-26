@@ -1,0 +1,42 @@
+/* =========================================================
+   HUOKAING THARA - Banking System UI
+========================================================= */
+
+body {
+    background-color: #0b1120;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.deposit-dashboard { max-width: 1200px; margin: auto; }
+
+/* --- Headers & Actions --- */
+.module-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.btn-secondary { background: transparent; border: 1px solid #38bdf8; color: #38bdf8; padding: 10px 20px; border-radius: 8px; cursor: pointer; transition: 0.3s; }
+.btn-secondary:hover { background: #38bdf8; color: #000; }
+
+/* --- Summary Cards --- */
+.summary-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 30px; }
+.summary-card { background: #1e293b; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
+.summary-card.gold { border-color: #fbbf24; }
+.card-label { color: #94a3b8; font-size: 0.8rem; }
+h2 { margin: 10px 0; font-size: 1.8rem; }
+
+/* --- Operational Panels --- */
+.panel-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 20px; }
+.data-panel { background: #1e293b; padding: 20px; border-radius: 15px; border: 1px solid #334155; }
+
+/* --- Audit Table Styling --- */
+.deposit-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.deposit-table th { text-align: left; padding: 12px; color: #64748b; font-size: 0.75rem; text-transform: uppercase; border-bottom: 1px solid #334155; }
+.deposit-table td { padding: 12px; border-bottom: 1px solid #2d3748; font-size: 0.9rem; }
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; }
+.badge.success { background: #065f46; color: #34d399; }
+
+/* --- Withdrawal Module --- */
+.withdrawal-panel { margin-top: 20px; border: 1px solid #ef4444; }
+.withdrawal-input { padding: 10px; border-radius: 8px; border: 1px solid #334155; background: #0f172a; color: white; width: 200px; }
+.btn-withdraw { background: #ef4444; color: white; padding: 10px 20px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; margin-left: 10px; }
+.btn-withdraw:hover { background: #b91c1c; }

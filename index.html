@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT Banking System - Liquidity & Deposit Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="withdrawal.png">
+
+</head>
+<body>
+
+    <!-- Main Module Container -->
+    <div class="deposit-dashboard">
+        
+        <!-- Top Management Header -->
+        <header class="module-header">
+            <div class="title-area">
+                <h2>CORE DEPOSIT & LIQUIDITY LEDGER</h2>
+                <p>Huokaing Thara Banking System • System Monitoring Panel</p>
+            </div>
+            <div class="action-buttons">
+                <button id="refreshDataBtn" class="btn-secondary">Re-Synchronize</button>
+            </div>
+        </header>
+
+        <!-- Summary Row -->
+        <section class="summary-row">
+            <div class="summary-card gold">
+                <span class="card-label">Total Liquid Capital</span>
+                <h2 id="displayTotalDeposits">$1,152,910,000</h2>
+                <div class="progress-bar-container"><div class="progress-bar" style="width: 84.3%;"></div></div>
+            </div>
+            <!-- Additional summary cards here -->
+        </section>
+
+        <!-- Operational Breakdowns -->
+        <div class="panel-layout">
+            
+            <!-- Asset Distribution -->
+            <section class="data-panel">
+                <h3>Deposit Asset Class Distribution</h3>
+                <div id="distributionContainer"></div>
+            </section>
+
+            <!-- Audit Vault Ledger -->
+            <section class="data-panel ledger-view">
+                <h3>Recent Institutional Inflows & Placements</h3>
+                <table class="deposit-table">
+                    <thead>
+                        <tr>
+                            <th>Reference ID</th>
+                            <th>Account Tier</th>
+                            <th>Routing Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="depositLogBody"></tbody>
+                </table>
+            </section>
+        </div>
+
+        <!-- Withdrawal Module -->
+        <section class="data-panel withdrawal-panel">
+            <h3>Funds Withdrawal</h3>
+            <input type="number" id="withdrawInput" class="withdrawal-input" placeholder="Enter amount..." />
+            <button class="btn-withdraw" onclick="WithdrawalModule.withdrawFunds(document.getElementById('withdrawInput').value)">
+                Execute Withdrawal
+            </button>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="ledger.js"></script>
+    <script src="deposit.js"></script>
+    <script src="deposit_vault.js"></script>
+    <script src="withdrawal.js"></script>
+    <script src="ultra_secure_mode.js"></script>    
+</body>
+</html>
