@@ -476,3 +476,42 @@ body {
 .deposit-table tbody tr {
     transition: all 0.3s ease;
 }
+
+/* =========================================================
+   GOOGLE TRANSLATE UI OVERRIDES
+========================================================= */
+
+/* Hide the top Google banner iframe that appears on translation */
+body {
+    top: 0 !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+/* Style the Google Translate dropdown container */
+#google_translate_element select {
+    background-color: #0f172a;
+    color: #38bdf8;
+    border: 1px solid #2b313a;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+#google_translate_element select:hover {
+    border-color: #38bdf8;
+}
+
+/* Hide Google branding tooltips if desired */
+.goog-logo-link {
+    display: none !important;
+}
+
+.goog-te-gadget {
+    color: transparent !important;
+}
