@@ -437,3 +437,42 @@ body {
     outline: none;
     box-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
 }
+
+/* =========================================================
+   HUOKAING THARA SYSTEM - LEDGER & REMOVE ACTION STYLES
+========================================================= */
+
+/* Status and Action Badges */
+.status-badge {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+/* Row Action Buttons */
+.btn-remove-ledger {
+    background: #f6465d;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.1s ease;
+    margin-left: 6px;
+}
+
+.btn-remove-ledger:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+}
+
+/* Table Row Transition Smoothness */
+.deposit-table tbody tr {
+    transition: all 0.3s ease;
+}
