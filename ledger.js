@@ -24,17 +24,18 @@
                     <td>${log.route}</td>
                     <td class="item-amount">$${log.volume.toLocaleString()}</td>
                     <td>
-                        <span class="status-badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-right: 6px;">${log.status}</span>
+                        <span class="status-badge" style="background: rgba(34, 197, 94, 0.15); color: #22c55e; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">${log.status}</span>
+                    </td>
+                    <td>
                         <button class="btn-remove-ledger" data-id="${log.id}" style="background: #f6465d; color: #fff; border: none; padding: 4px 8px; border-radius: 4px; font-size: 0.8rem; cursor: pointer; font-weight: bold;">Remove</button>
                     </td>
                 </tr>
             `).join("");
             
-            // Save state to browser storage
             localStorage.setItem('ht_ledger_data', JSON.stringify(LedgerEngine.data));
             LedgerEngine.updateTotal();
         },
-
+    
         updateTotal: () => {
             const total = LedgerEngine.data.reduce((sum, item) => sum + item.volume, 0);
             const el = document.getElementById("displayTotalDeposits");
